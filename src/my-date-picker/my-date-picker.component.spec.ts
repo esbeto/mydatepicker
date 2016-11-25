@@ -908,16 +908,16 @@ describe('MyDatePicker', () => {
         invaliddate = getElement('.invaliddate');
         expect(invaliddate).toBe(null);
     });
-    
+
     it('options - disableUntil input dates validation', ()=> {
         comp.options = {
-            indicateInvalidDate: true, 
-            dateFormat: 'dd.mm.yyyy', 
+            indicateInvalidDate: true,
+            dateFormat: 'dd.mm.yyyy',
             disableUntil:{year: 2016, month: 11, day: 4}
         };
-        
+
         comp.parseOptions();
-        
+
         comp.userDateInput({target:{value:'11.12.2015'}});
         fixture.detectChanges();
         let invaliddate = getElement('.invaliddate');
@@ -1112,7 +1112,7 @@ describe('MyDatePicker', () => {
         fixture.detectChanges();
         selection = getElement('.selection');
         expect(selection).not.toBe(null);
-        expect(selection.properties['placeholder']).toBe('');
+        expect(selection.properties['placeholder']).toBe('Seleccionar');
     });
 
     it('options - disable component', () => {
@@ -1294,8 +1294,3 @@ describe('MyDatePicker', () => {
     });
 
 });
-
-
-
-
-
